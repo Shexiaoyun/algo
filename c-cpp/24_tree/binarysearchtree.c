@@ -88,7 +88,7 @@ Status Delete(BTreePtr T, ElemType e) {
             minP = minP->lchild;
         }
         p->data = minP->data;
-        minPP->lchild = minP->rchild;
+        minPP->lchild = minP->rchild;//在这之前是否应该先判断minPP是否为p？
         free(minP);
 
         return TRUE;
